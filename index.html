@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sakeena Cookies - Premium Homemade Cookies dari Taiping</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+    :root {
+        --primary: #006241;
+        --primary-light: #008055;
+        --background: #F4FBF6;
+        --accent: #D4E9D7;
+        --text-dark: #1F2937;
+        --text-muted: #6B7280;
+    }
+    
+    * {
+        font-family: 'Poppins', sans-serif;
+    }
+    
+    html {
+        scroll-behavior: smooth;
+    }
+    
+    body {
+        background-color: var(--background);
+        color: var(--text-dark);
+    }
+    
+    .bg-primary { background-color: var(--primary); }
+    .bg-accent { background-color: var(--accent); }
+    .text-primary { color: var(--primary); }
+    .border-primary { border-color: var(--primary); }
+    
+    .btn-primary {
+        background: var(--primary);
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 14px 0 rgba(0, 98, 65, 0.25);
+    }
+    
+    .btn-primary:hover {
+        background: var(--primary-light);
+        transform: translateY(-2px);
+        box-shadow: 0 6px 20px 0 rgba(0, 98, 65, 0.35);
+    }
+    
+    .card-hover {
+        transition: all 0.3s ease;
+    }
+    
+    .card-hover:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 12px 28px 0 rgba(0, 0, 0, 0.08);
+    }
+    
+    .hero-pattern {
+        background-image: radial-gradient(circle at 20% 50%, rgba(212, 233, 215, 0.4) 0%, transparent 50%),
+                          radial-gradient(circle at 80% 80%, rgba(0, 98, 65, 0.06) 0%, transparent 50%);
+    }
+    
+    .nav-scrolled {
+        background: rgba(244, 251, 246, 0.95);
+        backdrop-filter: blur(12px);
+        box-shadow: 0 2px 20px rgba(0, 0, 0, 0.04);
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .animate-fade-in {
+        animation: fadeInUp 0.6s ease forwards;
+    }
+</style>
+</head>
+<body class="antialiased">
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 py-4">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center gap-2">
+                    <svg class="w-8 h-8 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <span class="text-xl font-semibold text-primary">Sakeena Cookies</span>
+                </div>
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#produk" class="text-sm font-medium text-gray-700 hover:text-primary transition-colors">Produk</a>
+                    <a href="#kelebihan" class="text-sm font-medium text-gray-700 hover:text-primary transition-colors">Kelebihan</a>
+                    <a href="#testimoni" class="text-sm font-medium text-gray-700 hover:text-primary transition-colors">Testimoni</a>
+                    <a href="#lokasi" class="text-sm font-medium text-gray-700 hover:text-primary transition-colors">Lokasi</a>
+                    <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order" target="_blank" class="btn-primary text-white px-5 py-2.5 rounded-full text-sm font-medium">
+                        Order WhatsApp
+                    </a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden text-primary">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden mt-4 px-4 pb-4">
+            <div class="bg-white rounded-2xl shadow-lg p-4 space-y-3">
+                <a href="#produk" class="block py-2 text-sm font-medium text-gray-700 hover:text-primary">Produk</a>
+                <a href="#kelebihan" class="block py-2 text-sm font-medium text-gray-700 hover:text-primary">Kelebihan</a>
+                <a href="#testimoni" class="block py-2 text-sm font-medium text-gray-700 hover:text-primary">Testimoni</a>
+                <a href="#lokasi" class="block py-2 text-sm font-medium text-gray-700 hover:text-primary">Lokasi</a>
+                <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order" target="_blank" class="block btn-primary text-white px-5 py-3 rounded-full text-sm font-medium text-center">
+                    Order WhatsApp
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern pt-28 pb-16 lg:pt-40 lg:pb-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left animate-fade-in">
+                    <div class="inline-flex items-center gap-2 bg-accent px-4 py-2 rounded-full mb-6">
+                        <span class="w-2 h-2 bg-primary rounded-full animate-pulse"></span>
+                        <span class="text-xs font-medium text-primary">Bakar Segar Setiap Hari</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
+                        Sakeena <span class="text-primary">Cookies</span>
+                    </h1>
+                    <p class="text-lg sm:text-xl text-gray-600 mb-8 leading-relaxed">
+                        Premium Homemade Cookies dari Taiping
+                    </p>
+                    <p class="text-base text-gray-600 mb-10 max-w-xl mx-auto lg:mx-0">
+                        Dihasilkan dengan 100% butter premium dan bahan berkualiti. Setiap gigitan penuh dengan rasa nostalgia dan kasih sayang homemade.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order" target="_blank" class="btn-primary text-white px-8 py-4 rounded-full text-base font-semibold inline-flex items-center justify-center gap-2">
+                            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                            </svg>
+                            Order WhatsApp
+                        </a>
+                        <a href="#produk" class="bg-white text-primary border-2 border-primary px-8 py-4 rounded-full text-base font-semibold hover:bg-accent transition-all">
+                            Lihat Menu
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-accent rounded-[3rem] p-8 lg:p-12">
+                        <img src="https://images.unsplash.com/photo-1558961363-fa8fdf82db35?w=600&h=600&fit=crop" alt="Sakeena Cookies" class="rounded-3xl w-full h-auto shadow-2xl">
+                    </div>
+                    <div class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-xl p-5 hidden sm:block">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-accent p-3 rounded-xl">
+                                <svg class="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm font-semibold text-gray-900">100% Premium</p>
+                                <p class="text-xs text-gray-500">Butter Berkualiti</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Produk Section -->
+    <section id="produk" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Menu Kami</span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-3 mb-4">Pilihan Cookies Premium</h2>
+                <p class="text-gray-600">Setiap balang 200g. Dihasilkan fresh setiap hari dengan bahan premium</p>
+            </div>
+            
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl card-hover border border-gray-100">
+                    <div class="aspect-square bg-accent overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1499636136210-6f4ee915583e?w=500&h=500&fit=crop" alt="Chocolate Chip" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Chocolate Chip</h3>
+                        <p class="text-sm text-gray-500 mb-4">Classic cookies dengan chocolate chip Belgium premium</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">RM25</span>
+                            <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order%20Chocolate%20Chip%20RM25" target="_blank" class="btn-primary text-white px-5 py-2.5 rounded-full text-sm font-medium">
+                                Tempah
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl card-hover border border-gray-100">
+                    <div class="aspect-square bg-accent overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1618923850107-d1a234d7e112?w=500&h=500&fit=crop" alt="Red Velvet" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Red Velvet</h3>
+                        <p class="text-sm text-gray-500 mb-4">Cookies lembut dengan cream cheese frosting</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">RM28</span>
+                            <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order%20Red%20Velvet%20RM28" target="_blank" class="btn-primary text-white px-5 py-2.5 rounded-full text-sm font-medium">
+                                Tempah
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl card-hover border border-gray-100">
+                    <div class="aspect-square bg-accent overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?w=500&h=500&fit=crop" alt="Almond Butter" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Almond Butter</h3>
+                        <p class="text-sm text-gray-500 mb-4">Kaya dengan badam panggang dan butter premium</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">RM30</span>
+                            <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order%20Almond%20Butter%20RM30" target="_blank" class="btn-primary text-white px-5 py-2.5 rounded-full text-sm font-medium">
+                                Tempah
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl card-hover border border-gray-100">
+                    <div class="aspect-square bg-accent overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1590080875831-6e50f2e75e56?w=500&h=500&fit=crop" alt="Matcha" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Matcha</h3>
+                        <p class="text-sm text-gray-500 mb-4">Teh hijau Jepun premium dengan white chocolate</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">RM27</span>
+                            <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order%20Matcha%20RM27" target="_blank" class="btn-primary text-white px-5 py-2.5 rounded-full text-sm font-medium">
+                                Tempah
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl card-hover border border-gray-100">
+                    <div class="aspect-square bg-accent overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?w=500&h=500&fit=crop" alt="Oatmeal Raisin" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Oatmeal Raisin</h3>
+                        <p class="text-sm text-gray-500 mb-4">Sihat dan sedap dengan oat & kismis premium</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">RM24</span>
+                            <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order%20Oatmeal%20Raisin%20RM24" target="_blank" class="btn-primary text-white px-5 py-2.5 rounded-full text-sm font-medium">
+                                Tempah
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-sm hover:shadow-xl card-hover border border-gray-100">
+                    <div class="aspect-square bg-accent overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1597733153208-fb30e3ed1b4a?w=500&h=500&fit=crop" alt="Double Choc" class="w-full h-full object-cover hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold text-gray-900 mb-2">Double Choc</h3>
+                        <p class="text-sm text-gray-500 mb-4">Untuk choc lover! Double chocolate Belgian</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-2xl font-bold text-primary">RM29</span>
+                            <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order%20Double%20Choc%20RM29" target="_blank" class="btn-primary text-white px-5 py-2.5 rounded-full text-sm font-medium">
+                                Tempah
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Kelebihan Section -->
+    <section id="kelebihan" class="py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Kenapa Kami</span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-3 mb-4">Kelebihan Sakeena Cookies</h2>
+                <p class="text-gray-600">Komitmen kami untuk kualiti dan kepuasan pelanggan</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-3xl p-8 text-center card-hover border border-gray-100">
+                    <div class="bg-accent w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">100% Butter Premium</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Kami hanya guna butter premium import. Tiada marjerin atau bahan tiruan. Rasa lebih rich dan lembut.</p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-3xl p-8 text-center card-hover border border-gray-100">
+                    <div class="bg-accent w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Bakar Segar Setiap Hari</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Order hari ini, kami bakar esok. Jaminan cookies fresh, rangup di luar lembut di dalam. Tiada stok lama.</p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-3xl p-8 text-center card-hover border border-gray-100">
+                    <div class="bg-accent w-16 h-16 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-8 h-8 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 8h14M5 8a2 2 0 110-4h14a2 2 0 110 4M5 8v10a2 2 0 002 2h10a2 2 0 002-2V8m-9 4h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold text-gray-900 mb-3">Postage Seluruh Malaysia</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">Hantar ke mana saja di Malaysia. Packaging selamat dan kemas. Cookies sampai dalam keadaan sempurna.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimoni Section -->
+    <section id="testimoni" class="py-16 lg:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12 lg:mb-16">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Testimoni</span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-3 mb-4">Apa Kata Pelanggan</h2>
+                <p class="text-gray-600">Beribu pelanggan dah jatuh cinta dengan cookies kami</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <!-- Testimoni 1 -->
+                <div class="bg-accent rounded-3xl p-8 lg:p-10">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path>
+                        </svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">"Ya Allah sedap sangat! Cookies Sakeena ni memang lain dari yang lain. Rangup tapi lembut, rasa butter dia premium betul. Anak-anak berebut makan. Dah repeat order 3 kali dah 😍"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-semibold">
+                            N
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Noraini Ahmad</p>
+                            <p class="text-sm text-gray-600">Taiping, Perak</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimoni 2 -->
+                <div class="bg-accent rounded-3xl p-8 lg:p-10">
+                    <div class="flex gap-1 mb-4">
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                        <svg class="w-5 h-5 text-yellow-400" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"></path></svg>
+                    </div>
+                    <p class="text-gray-700 mb-6 leading-relaxed">"Packaging cantik, cookies sampai elok tak pecah. Rasa matcha dia kaw, red velvet pun padu. Customer service pun friendly, fast response. Highly recommend! Akan order lagi untuk raya nanti 👍"</p>
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-white font-semibold">
+                            F
+                        </div>
+                        <div>
+                            <p class="font-semibold text-gray-900">Farid Hassan</p>
+                            <p class="text-sm text-gray-600">Ipoh, Perak</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lokasi Section -->
+    <section id="lokasi" class="py-16 lg:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-12">
+                <span class="text-primary font-semibold text-sm uppercase tracking-wider">Lokasi Kami</span>
+                <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mt-3 mb-4">Beroperasi dari Taiping</h2>
+                <p class="text-gray-600">Kami beroperasi dari Taiping, Perak. Tempahan online dan postage seluruh Malaysia.</p>
+            </div>
+            
+            <div class="grid lg:grid-cols-5 gap-8 items-start">
+                <div class="lg:col-span-2 bg-white rounded-3xl p-8 border border-gray-100">
+                    <h3 class="text-xl font-semibold text-gray-900 mb-6">Tempahan & Pertanyaan</h3>
+                    <div class="space-y-5">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-accent p-3 rounded-xl">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-900">Lokasi</p>
+                                <p class="text-sm text-gray-600">Taiping, Perak, Malaysia</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-accent p-3 rounded-xl">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-900">WhatsApp</p>
+                                <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order" target="_blank" class="text-sm text-primary hover:underline">01140091694</a>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-accent p-3 rounded-xl">
+                                <svg class="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                </svg>
+                            </div>
+                            <div>
+                                <p class="text-sm font-medium text-gray-900">Waktu Operasi</p>
+                                <p class="text-sm text-gray-600">Isnin - Sabtu: 9AM - 6PM</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order" target="_blank" class="btn-primary text-white w-full mt-8 py-4 rounded-full text-base font-semibold inline-flex items-center justify-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                        </svg>
+                        WhatsApp Sekarang
+                    </a>
+                </div>
+                
+                <div class="lg:col-span-3 rounded-3xl overflow-hidden shadow-lg h-[400px] lg:h-[500px]">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63535.51838508248!2d100.69538179726562!3d4.851664099999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3034c3b27a7a0f1b%3A0x1e48f1b1b1b1b1b1!2sTaiping%2C%20Perak!5e0!3m2!1sen!2smy!4v1234567890"
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade"
+                        title="Lokasi Sakeena Cookies Taiping">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 lg:py-20 bg-primary">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl lg:text-4xl font-bold text-white mb-4">Jom Order Sekarang!</h2>
+            <p class="text-lg text-green-100 mb-8">Dapatkan cookies premium fresh dari oven terus ke rumah anda</p>
+            <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order" target="_blank" class="inline-flex items-center gap-2 bg-white text-primary px-8 py-4 rounded-full text-base font-semibold hover:bg-gray-50 transition-all shadow-xl hover:shadow-2xl hover:-translate-y-1">
+                <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+                </svg>
+                Order WhatsApp 01140091694
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-white py-12 border-t border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-2">
+                    <svg class="w-7 h-7 text-primary" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8zm-1-13h2v6h-2zm0 8h2v2h-2z"/>
+                    </svg>
+                    <span class="text-lg font-semibold text-primary">Sakeena Cookies</span>
+                </div>
+                <div class="text-center">
+                    <p class="text-sm text-gray-600 mb-1">
+                        <span class="font-medium">Contact:</span> 
+                        <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order" target="_blank" class="text-primary hover:underline">01140091694</a>
+                    </p>
+                    <p class="text-xs text-gray-500">Website contoh untuk tujuan demonstrasi sahaja</p>
+                </div>
+                <p class="text-sm text-gray-500">&copy; 2024 Sakeena Cookies. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/601140091694?text=Hi%20Sakeena%20Cookies,%20saya%20nak%20order" target="_blank" class="fixed bottom-6 right-6 bg-green-500 hover:bg-green-600 text-white p-4 rounded-full shadow-2xl hover:shadow-green-500/50 transition-all z-50 hover:scale-110">
+        <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+        </svg>
+    </a>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when clicking links
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Navbar scroll effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('nav-scrolled');
+            } else {
+                navbar.classList.remove('nav-scrolled');
+            }
+        });
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    const offset = 80;
+                    const targetPosition = target.offsetTop - offset;
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+    </script>
+<script>(function(){document.addEventListener("click",function(e){var a=e.target.closest("[data-product-id]");if(!a)return;e.preventDefault();var pid=a.getAttribute("data-product-id");if(pid)parent.postMessage({type:"ecto-artifact-link-click",productId:pid},"*")})})();</script>
+</body>
+</html>
